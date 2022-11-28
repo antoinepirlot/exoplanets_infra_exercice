@@ -1,9 +1,5 @@
-const PgUser = 'postgres';
-const PgHost = 'localhost';
-const PgDb = 'exoplanets';
-const PgPassword = 'ipl';
-const PgPort = 5432;
+const dbUrl = process.env.DATABASE_URL
 
 module.exports = {
-    ConnectionString: 'postgres://' + PgUser + ':' + PgPassword + '@' + PgHost + ':' + PgPort + '/' + PgDb
+    ConnectionString: dbUrl
 };
